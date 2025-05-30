@@ -16,7 +16,10 @@ class _Layer1State extends State<Layer1> {
       body: SafeArea(
         child: Column(
           children: [
-            Text("demo", style: TextStyle(color: Colors.white),)
+            Padding(
+              padding: const EdgeInsets.only(top: 20.0),
+              child: Center(child: Text("XPERIATE", style: TextStyle(color: Colors.white, fontFamily: "monext", fontSize: 16),)),
+            )
           ],
         ),
       ),
