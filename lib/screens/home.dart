@@ -13,8 +13,6 @@ class Home extends StatefulWidget {
 }
 
 class _HomeState extends State<Home> {
-
-  TextEditingController _name = TextEditingController();
   String name = '';
 
   void initState() {
@@ -24,8 +22,9 @@ class _HomeState extends State<Home> {
 
   void _initializeLifeCycle() async {
     SharedPreferences prefs = await SharedPreferences.getInstance();
-    // prefs.setString("name", ""); // OVERRIDE PREFS COMMANDLINE
-    name = prefs.getString('name').toString();
+    setState(() {
+      name = prefs.getString('name').toString();
+    });
     print(name);
   }
 

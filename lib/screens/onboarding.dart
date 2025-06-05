@@ -68,7 +68,7 @@ class _OnboardingState extends State<Onboarding> {
                     SharedPreferences prefs = await SharedPreferences.getInstance();
                     prefs.setString('name', _name.text);
 
-                    Navigator.push(context, MaterialPageRoute(builder: (context) => Home()));
+                    Navigator.pushReplacement(context, MaterialPageRoute(builder: (context) => Home()));
                   },
                   child: Row(
                     mainAxisAlignment: MainAxisAlignment.center,

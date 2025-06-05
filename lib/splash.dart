@@ -20,6 +20,16 @@ class _SplashState extends State<Splash> {
   void initState() {
     super.initState();
     _initializeLifeCycle();
+  }
+
+  void _initializeLifeCycle() async {
+    SharedPreferences prefs = await SharedPreferences.getInstance();
+    // prefs.setString("name", ""); // OVERRIDE PREFS COMMANDLINE
+    if (prefs.getString("name") == null || prefs.getString("name") == "") {
+      _nameState = false;
+    } else {
+      _nameState = true;
+    }
 
     Timer(Duration(seconds: 3), () {
       print('timed');
@@ -34,15 +44,6 @@ class _SplashState extends State<Splash> {
         ));
       }
     });
-  }
-
-  void _initializeLifeCycle() async {
-    SharedPreferences prefs = await SharedPreferences.getInstance();
-    if (prefs.getString("name") == null || prefs.getString("name") == "") {
-      _nameState = false;
-    } else {
-      _nameState = true;
-    }
   }
 
   @override
