@@ -20,7 +20,7 @@ class _HomeState extends State<Home> {
       _initializeLifeCycle();
   }
 
-  void _initializeLifeCycle() async {
+  void _initializeLifeCycle() async { 
     SharedPreferences prefs = await SharedPreferences.getInstance();
     setState(() {
       name = prefs.getString('name').toString();

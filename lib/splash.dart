@@ -2,6 +2,7 @@ import 'dart:async';
 
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:sandbox/globals.dart';
 import 'package:sandbox/screens/home.dart';
 import 'package:sandbox/screens/onboarding.dart';
 import 'package:shared_preferences/shared_preferences.dart';
@@ -38,6 +39,7 @@ class _SplashState extends State<Splash> {
         Navigator.pushReplacement(context, MaterialPageRoute(
           builder: (context) => Home(),
         ));
+        Globals.changeScreenState("home");
       } else {
         Navigator.pushReplacement(context, MaterialPageRoute(
           builder: (context) => Onboarding(),

@@ -23,7 +23,7 @@ class _Layer1State extends State<Layer1> {
           children: [
             Padding(
               padding: const EdgeInsets.only(top: 20.0),
-              child: Center(child: Text("Good Morning, ${widget.name}", style: TextStyle(color: Colors.white, fontFamily: "monext", fontSize: 16),)),
+              child: Center(child: Text("Good Morning, ${widget.name}", style: TextStyle(color: Colors.white, fontFamily: "monext", fontSize: 18),)),
             )
           ],
         ),
