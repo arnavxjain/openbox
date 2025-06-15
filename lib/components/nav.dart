@@ -41,24 +41,28 @@ class _NavState extends State<Nav> {
                     setState(() {
                       Globals.changeScreenState("home");
                       current = 'home';
+                      print(Globals.screenState);
                     });
                   },),
                   CupertinoButton(padding: EdgeInsets.zero, child: Icon(CupertinoIcons.graph_circle, color: current == "stats" ? Color(0xFF7989FF) : Color(0xFF555555), size: 20), onPressed: () {
                     setState(() {
                       Globals.changeScreenState("stats");
                       current = 'stats';
+                      print(Globals.screenState);
                     });
                   },),
                   CupertinoButton(padding: EdgeInsets.zero, child: Icon(CupertinoIcons.link, color: current == "link" ? Color(0xFF7989FF) : Color(0xFF555555), size: 18), onPressed: () {
                     setState(() {
                       Globals.changeScreenState("link");
                       current = 'link';
+                      print(Globals.screenState);
                     });
                   },),
                   CupertinoButton(padding: EdgeInsets.zero, child: Icon(CupertinoIcons.cube_box_fill, color: current == "prof" ? Color(0xFF7989FF) : Color(0xFF555555), size: 20), onPressed: () {
                     setState(() {
                       Globals.changeScreenState("prof");
                       current = 'prof';
+                      print(Globals.screenState);
                     });
                   },)
                 ],
